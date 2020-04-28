@@ -11,6 +11,10 @@ public class Proyecto {
 	protected String apellido2;
 	protected String dni;
 	protected int edad;
+	/**
+	 * AÑADO OTRO DATO
+	 */
+	protected String telefono;
 	
 	/**
 	 * 
@@ -21,13 +25,14 @@ public class Proyecto {
 	 * @param edad
 	 * AÑADIMOS LOS CONSTRUCTORES
 	 */
-	public Proyecto(String nombre, String apellido1, String apellido2, String dni, int edad) {
+	public Proyecto(String nombre, String apellido1, String apellido2, String dni, int edad,String telefono) {
 		super();
 		this.nombre = nombre;
 		this.apellido1 = apellido1;
 		this.apellido2 = apellido2;
 		this.dni = dni;
 		this.edad = edad;
+		this.telefono=telefono;
 	}
 	public Proyecto() {
 		super();
@@ -36,6 +41,7 @@ public class Proyecto {
 		this.apellido2 = "";
 		this.dni = "";
 		this.edad = 0;
+		this.telefono="";
 	}
 	public Proyecto(Proyecto p) {
 		super();
@@ -44,8 +50,15 @@ public class Proyecto {
 		this.apellido2 = p.apellido2;
 		this.dni = p.dni;
 		this.edad =p.edad;
+		this.telefono=p.telefono;
 	}
 	
+	public String getTelefono() {
+		return telefono;
+	}
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
 	/**
 	 * 
 	 * @return
@@ -87,7 +100,7 @@ public class Proyecto {
 	@Override
 	public String toString() {
 		return "Proyecto [nombre=" + nombre + ", apellido1=" + apellido1 + ", apellido2=" + apellido2 + ", dni=" + dni
-				+ ", edad=" + edad + "]";
+				+ ", edad=" + edad +", telefono= "+telefono+ "]";
 	}
 	/**
 	 * CREAMOS UN METODO PERSONALIZADO
@@ -99,6 +112,7 @@ public class Proyecto {
 		System.out.println("Segundo apellido: "+this.apellido2);
 		System.out.println("DNI: "+this.dni);
 		System.out.println("Edad: "+this.edad);
+		System.out.println("Telefono: "+this.telefono);
 
 	}
 	
