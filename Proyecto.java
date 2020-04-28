@@ -1,4 +1,9 @@
 package proyecto;
+/**
+ * 
+ * @author salvita
+ *CREACION INICIAL DEL PROYECTO
+ */
 
 public class Proyecto {
 	protected String nombre;
@@ -7,7 +12,15 @@ public class Proyecto {
 	protected String dni;
 	protected int edad;
 	
-	
+	/**
+	 * 
+	 * @param nombre
+	 * @param apellido1
+	 * @param apellido2
+	 * @param dni
+	 * @param edad
+	 * AÑADIMOS LOS CONSTRUCTORES
+	 */
 	public Proyecto(String nombre, String apellido1, String apellido2, String dni, int edad) {
 		super();
 		this.nombre = nombre;
@@ -33,6 +46,11 @@ public class Proyecto {
 		this.edad =p.edad;
 	}
 	
+	/**
+	 * 
+	 * @return
+	 * AÑADIMOS LOS GETTERS Y SETTERS
+	 */
 	public String getNombre() {
 		return nombre;
 	}
@@ -63,10 +81,25 @@ public class Proyecto {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
+	/**
+	 * CREAMOS EL TO STRING
+	 */
 	@Override
 	public String toString() {
 		return "Proyecto [nombre=" + nombre + ", apellido1=" + apellido1 + ", apellido2=" + apellido2 + ", dni=" + dni
 				+ ", edad=" + edad + "]";
+	}
+	/**
+	 * CREAMOS UN METODO PERSONALIZADO
+	 */
+	public void MostrarDatos() 
+	{
+		System.out.println("Nombre: "+this.nombre);
+		System.out.println("Primer apellido: "+this.apellido1);
+		System.out.println("Segundo apellido: "+this.apellido2);
+		System.out.println("DNI: "+this.dni);
+		System.out.println("Edad: "+this.edad);
+
 	}
 	
 	
